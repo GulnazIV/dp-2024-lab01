@@ -1,12 +1,13 @@
-from lib.SingletonLogger import SingletonLogger
+from lib.singleton_logger import SingletonLogger
+from module.log_levels import LEVELS
 
 logger1 = SingletonLogger('log')
-logger1.log("fff","info 1")
-logger1.log("WARN", "warn")
+logger1.log(LEVELS.INFO,"info 1")
+logger1.log(LEVELS.WARN, "warn")
 
 logger2 = SingletonLogger('log')
-logger2.log("ERROR", "error")
+logger2.log(LEVELS.ERROR, "error")
 
 logger3 = SingletonLogger('log')
-logger3.log("INFO", "info 3")
-logger3.log("ERROR", "error 3")
+logger3.log(LEVELS.INFO, "info 3")
+logger3.log(LEVELS.ERROR, "error 3")
