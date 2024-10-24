@@ -49,5 +49,3 @@ class SingletonLogger:
         with self._lock_write:
             with open(self.file_path, 'a') as log_file:
                 log_file.write(formatted_message + '\n')
-
-# pathlib
